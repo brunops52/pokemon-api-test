@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="luzes">
+            <div class="ledMaior"></div>
+            <div class="led_1"></div>
+            <div class="led_2"></div>
+            <div class="led_3"></div>
+        </div>
+        <div id="erro"><h2>Digite um Pokémon existente</h2></div>
+        <div class="imagens">
+            <picture>
+                <source media="(max-width:728px)"
+                srcset="./IMAGENS/fundoPokemonMobile.png">
+                <img src="./IMAGENS/fundoPokemon.png" alt="">
+            </picture>
+            <img id="pokemonImagem" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" alt="">
+            <h2 id="nomePokemon">Qual o Pokémon?</h2>
+        </div>
+        <div class="chamada">
+            <input id="valor" type="text" required placeholder="Digite Seu Pokemon ou ID">
+            <div class="botoes">
+                <button id="pesquisa" type="button">Pesquisar</button>
+                <button id="limpa" type="button">Limpar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

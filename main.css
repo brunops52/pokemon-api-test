@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./IMAGENS/fundo.jfif);
+}
+.container{
+    max-width: 600px;
+    margin: 35px auto;
+    background-color: rgb(211, 10, 63);
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    border: solid 8px #b30726;
+    box-shadow:  8px 8px #797474;
+    font-family: 'Montserrat', sans-serif;
+}
+.luzes{
+    display: flex;
+    padding: 30px;
+}
+@keyframes mudarCor {
+    10% {
+        background-color: rgb(46, 46, 46);
+    }
+}
+.ledMaior{
+    max-width: 40px;
+    padding: 44px;
+    background-color: rgb(49, 231, 255);
+    border-radius: 100%;
+    border: solid 12px #fff;
+    box-shadow: inset -10px -10px 10px rgb(13, 136, 126), inset 3px 3px 5px #eee;
+}
+.led_1,.led_2,.led_3{
+    height: 1px;
+    padding: 15px;
+    margin-left: 18px;
+    background-color: rgb(49, 231, 255);
+    border-radius: 100%;
+    box-shadow: inset -1px -1px 1px rgb(63, 63, 63), inset 3px 3px 5px #ffffffc2;
+}
+.led_1{
+    background-color: #b30726;
+    animation: mudarCor 3.5s infinite;
+}
+.led_2{
+    background-color: rgb(238, 255, 0);
+    animation: mudarCor 4s infinite;
+}
+.led_3{
+    background-color: rgb(23, 236, 23);
+    animation: mudarCor 4.5s infinite;
+}
+.imagens{
+    max-width: 520px;
+    padding-top: 35px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    border-bottom-left-radius: 90px;
+    border: solid 2px #838383;
+    box-shadow:  8px 8px #979797;
+    position: relative;
+}
+.imagens img{
+    max-width: 390px;
+    border-radius: 15px;
+}
+#pokemonImagem{
+    width: 200px;
+    position: absolute;
+    top: 15%;
+    left: 33%;
+}
+.imagens h2{
+    text-align: end;
+    margin: 28px 18px;
+}
+.chamada{
+    text-align: center;
+    margin-top: 52px;
+    padding-bottom: 30px;
+}
+.chamada input{
+    width: 400px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #838383;
+    box-shadow:  5px 5px;
+    border-radius: 10px;
+}
+.botoes button{
+    width:180px;
+    padding:20px 30px;
+    margin:60px 20px;
+    background-color: #423F3F;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    border: solid 2px #616161;
+    box-shadow:  8px 8px #333232;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botoes button:hover {
+    transform: translateY(-0.1em);
+}
+.botoes button:active{
+    transform: translateY(0);
+}
+#erro{
+    width: 600px;
+    padding: 40px;
+    display: none;
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    text-align: center;background-color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    border: solid 5px;
+}
+/*deixando responsivo*/
+@media screen and (max-width:767px){
+    .container{
+        max-width: 80%;
+    }
+    .imagens{
+        max-width: 80%;
+    }
+    .imagens img{
+        max-width: 80%;
+    }
+    .imagens h2{
+        margin: 12px 16px;
+    }
+    #pokemonImagem{
+        width: 70%;
+        top: 20%;
+        left: 20%;
+    }
+    .chamada{
+        padding-bottom: 10px;
+    }
+    .chamada input{
+        width: 80%;
+        padding: 14px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .botoes button{
+        width:40%;
+        padding:16px 16px;
+        margin:16px 5px;
+        text-align: center;
+        font-size: 16px;
+    }
+    #erro{
+        width: 300px;
+    }
+}
