@@ -76,6 +76,7 @@ body{
     left: 33%;
 }
 .imagens h2{
+    color: rgb(0, 0, 255);
     text-align: end;
     margin: 28px 18px;
 }
